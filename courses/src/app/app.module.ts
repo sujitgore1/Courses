@@ -10,6 +10,7 @@ import { CoursesComponent } from './Courses/courses/courses.component';
 import { DetailsComponent } from './details/details.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ErrorComponent } from './Error/error/error.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     AboutComponent,
     ContactComponent,
     CoursesComponent,
-    DetailsComponent
+    DetailsComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
