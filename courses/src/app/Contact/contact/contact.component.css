@@ -1,0 +1,11 @@
+input,select,textarea{
+    background-color: transparent;
+    border: 1px solid grey;
+    width: 100%;
+    border-radius: 0%;
+    padding: 10px;
+}
+
+.form{
+    width: 50%;
+}

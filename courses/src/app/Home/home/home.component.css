@@ -1,0 +1,26 @@
+.container{
+    padding: 50px 110px;
+}
+
+.notes{
+    background: #021328;
+    color: #c0d9f3;
+    padding: 50px 150px 50px 150px;
+}
+
+.card{
+    background-color: hsl(211, 88%, 94%);
+}
+.card-group{
+    width: 280px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.card-img-top{
+    height: 150px;
+}
+
+.cards{
+    padding: 50px 110px;
+}

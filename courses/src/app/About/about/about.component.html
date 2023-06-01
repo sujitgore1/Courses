@@ -1,0 +1,25 @@
+<div class="description text-center">
+    <h1 class="text-center">About Us Page</h1>
+    <p class="fs-2">Some text about who we are and what we do.</p>
+    <br><hr>
+    <h1 class="text-decoration-underline">Our Team</h1>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="container d-flex">
+    <div *ngFor="let data of users" class="card m-4" style="width: 18rem;">
+        <img src="{{data.avatar}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{data.name}}</h5>
+          <p class="card-text">{{data.description}}</p>
+          <a href="mailto:{{data.contact}}" class="btn btn-primary">Contact</a>
+        </div>
+      </div>
+</div>

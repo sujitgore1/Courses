@@ -1,0 +1,13 @@
+li{
+    display: inline;
+    padding: 10px;
+}
+
+.navbar{
+    background-color: azure;
+    padding: 10px;
+}
+
+.content{
+    background-color:rgb(226, 234, 250);
+}

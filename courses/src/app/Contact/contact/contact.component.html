@@ -1,0 +1,46 @@
+<h1 class="align-middle">Contact Us</h1>
+<div class="form">
+    <form class="container" name="myForm" #frm="ngForm" (ngSubmit)="frm.form.valid && onSubmit(frm)">
+        <div class="form-group">
+            <input type="hidden" name="id" #id="ngModel" [(ngModel)]="idd">
+        </div>
+      <div class="form-group">
+        <label for="uname">Name</label><span class="text-danger">*</span>
+        <input type="text" class="form-control" name="uname" placeholder="Your Name" #uname="ngModel" [(ngModel)]="un"
+        required minlength="5" maxlength="10" [ngClass]="{'is-invalid':frm.submitted && uname.invalid}">
+    
+        <div *ngIf="frm.submitted && uname.invalid" class="invalid-feedback">
+          <div *ngIf="uname.errors?.['required']">Please enter username</div>
+          <div *ngIf="uname.errors?.['minlength']">Minimum five characters required</div>
+          <div *ngIf="uname.errors?.['maxlength']">Maximun ten characters allowed</div>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="email" class="form-label">Email</label><span class="text-danger">*</span>
+        <input type="email" class="form-control" name="email" placeholder="Email Address" #email="ngModel" [(ngModel)]="eml"
+        required email [ngClass]="{'is-invalid':frm.submitted && email.invalid}">
+    
+        <div class="invalid-feedback">
+          <div *ngIf="email.errors?.['required']">Please enter email address</div>
+          <div *ngIf="email.errors?.['email']">Please enter valid email</div>
+        </div>
+      </div>
+    
+      <div class="form-group">
+        <label for="country" class="form-label">Please select your country</label>
+        <select name="country" class="form-control" #country="ngModel" [(ngModel)]="selectedValue">
+          <option *ngFor="let country of countries">{{country}}</option>
+        </select>
+      </div><br>
+
+      <div class="form-group">
+        <label for="feedback">Feedback</label><span class="text-danger">*</span>
+        <textarea name="text" cols="30" rows="10" placeholder="Please give us your valuable feedback"></textarea>
+      </div>
+      
+      <div class="form-group d-flex justify-content-center rounded-0 mt-1">
+        <button type="submit" class="btn btn-dark rounded-0">Submit</button>
+      </div>
+    </form>
+</div>

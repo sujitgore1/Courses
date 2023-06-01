@@ -1,0 +1,20 @@
+<div class="container d-flex flex-wrap">
+    <div *ngFor="let course of courses" class="card-group">
+        <div class="card">
+          <img src={{course.image}} class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{course.name}}</h5>
+            <p class="card-text m-0">{{course.description}}</p>
+            <a href="">Show more</a>
+            <div class="d-flex justify-content-between">
+                <div class="type" [ngStyle]="{color:course.type==='Free' ? 'rgb(92, 252, 105)' : 'rgb(252, 192, 29)'}"><b>{{course.type}}</b></div>
+                <div *ngIf="course.price > 0" class="price">{{course.price | currency}}</div>
+            </div>
+          </div>
+          <div class="card-footer d-flex">
+            <button class="btn btn-primary m-1">Buy Now</button>
+            <button class="btn btn-primary m-1">Add Cart</button>
+          </div>
+        </div>
+      </div>
+</div>
