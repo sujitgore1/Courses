@@ -11,17 +11,29 @@ export class ContactComponent {
   public selectedValue:any=this.countries[0]
   public idNum:number=1
   public idd:any
-  public un:any=''
-  public mn:any=''
-  public eml:any=''
-  public ps:any=''
-  public gen:any=''
+  public un:any
+  public eml:any
 
-  public allData:any
-
+  public feedback:any
   constructor(private api : FeedbackService){}
 
   onSubmit(data:any){
-    console.log(data.value)
+    // console.log(data.value)
+    this.feedback = data.value
+
+    if(this.feedback.id == undefined){
+      this.feedback.id = this.idNum
+    }
+    this.idNum++
+    console.log(this.feedback)
+    this.api.postFeedbackData(data.value).subscribe((res)=>{
+      console.log(res)
+    })
+  }
+
+  getApiData(){
+    this.api.getFeedBackData().subscribe((res)=>{
+      console.log(res)
+    })
   }
 }

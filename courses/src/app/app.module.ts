@@ -9,6 +9,7 @@ import { ContactComponent } from './Contact/contact/contact.component';
 import { CoursesComponent } from './Courses/courses/courses.component';
 import { DetailsComponent } from './details/details.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

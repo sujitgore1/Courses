@@ -17,7 +17,7 @@
     <div *ngFor="let data of users" class="card m-4" style="width: 18rem;">
         <img src="{{data.avatar}}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">{{data.name}}</h5>
+          <h5 class="card-title d-inline">{{data.name}}</h5><span class="ps-1"><small><i>{{data.job}}</i></small></span>
           <p class="card-text">{{data.description}}</p>
           <a href="mailto:{{data.contact}}" class="btn btn-primary">Contact</a>
         </div>
