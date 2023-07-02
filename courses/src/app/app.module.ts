@@ -11,6 +11,7 @@ import { DetailsComponent } from './details/details.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ErrorComponent } from './Error/error/error.component';
+import { BuyNowComponent } from './Buy Now/buy-now/buy-now.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ErrorComponent } from './Error/error/error.component';
     ContactComponent,
     CoursesComponent,
     DetailsComponent,
-    ErrorComponent
+    ErrorComponent,
+    BuyNowComponent
   ],
   imports: [
     BrowserModule,

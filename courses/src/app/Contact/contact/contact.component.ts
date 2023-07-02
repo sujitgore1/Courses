@@ -13,6 +13,7 @@ export class ContactComponent {
   public idd:any
   public un:any
   public eml:any
+  public text:any
 
   public feedback:any
   constructor(private api : FeedbackService){}
@@ -35,5 +36,13 @@ export class ContactComponent {
     this.api.getFeedBackData().subscribe((res)=>{
       console.log(res)
     })
+  }
+
+  onExit(){
+    if(this.un || this.eml || this.text){
+      return confirm("Your data has not been save Do you want to discard")
+    }else{
+      return true
+    }
   }
 }

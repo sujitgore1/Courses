@@ -6,6 +6,9 @@ li{
 .navbar{
     background-color: azure;
     padding: 10px 10px 1px 1px;
+    /* position: fixed; */
+    z-index: 1;
+    width: 100%;
 }
 
 .content{
@@ -14,4 +17,8 @@ li{
 
 .active{
     background-color: rgb(208, 255, 255);
+}
+
+.component{
+    position: relative;
 }

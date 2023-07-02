@@ -12,9 +12,11 @@
             </div>
           </div>
           <div class="card-footer d-flex">
-            <button class="btn btn-primary m-1">Buy Now</button>
-            <button class="btn btn-primary m-1">Add Cart</button>
+            <button class="btn btn-primary m-1" routerLink="buyNow" (click)="showMessage()">Buy Now</button>
+            <!-- <button class="btn btn-primary m-1" routerLink="/Courses/details/{{course.id}}">Show Details</button> -->
+            <button class="btn btn-primary m-1" routerLink="details/{{course.id}}" (click)="showMessage()">Show Details</button>
           </div>
         </div>
       </div>
+      <router-outlet></router-outlet>
 </div>
